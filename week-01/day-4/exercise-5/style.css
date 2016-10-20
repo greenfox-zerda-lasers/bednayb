@@ -1,0 +1,19 @@
+h1{
+  color: blue;
+}
+h2{
+  color: rgb(242, 171, 17)
+}
+
+.square{
+   list-style-type: square;
+   color:blue;
+ }
+
+.circle{
+   list-style-type: disc;
+ }
+
+#apple{
+  color:red;
+}
