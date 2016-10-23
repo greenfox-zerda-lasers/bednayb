@@ -1,60 +1,224 @@
-body{
 
-  width: 550px;
-  position: relative;
+
+/* Picture Anakin */
+
+.cover {
+  width: 1300px;
+  height: 400px;
+  border-top: 5px solid black;
   margin: auto;
-  background-image: url(https://raw.githubusercontent.com/greenfox-academy/teaching-materials/master/tools-and-coding/project-cv/workshop/anakin.png );
+  background-image: url(anakin.png);
+  background-position: absolute center top;
   background-repeat: no-repeat;
-  background-size: 800px auto;
-  background-position: top center;
-  font-family: 'Open Sans', sans-serif;
-}
-
-
-
-
-
-
-header{
- height: 250px;
- font-family: 'Abril Fatface', cursive;
-position: relative;
-top: 120px;
-margin-bottom: 30px;
-line-height: 50%;
-
+  background-size: cover;
+  font-family: 'Abril Fatface';
+  margin-bottom: 50px;
 
 }
 
+/* WORDS IN THE PICTURE */
 
-.pictures{
-  width: 550px;
+.cover h1 {
 
-
-   background-color: rgb(66, 66, 66);
-   color: white;
-   font-size: 42px;
-   font-weight: bold;
-   padding-left: 50px;
-   padding-right: 50px;
-
-   padding-top: 50px;
-   padding-bottom: 50px;
-   position: relative;
-   left: 0px;
-
-
-}
-
-h1,h2{
+  font-size: 70px;
   margin: 0px;
+  padding: 0px;
+  margin-left: 20px;
+  margin-top: -18px;
+  padding-left: 300px;
+  font-weight:100;
+}
+
+.cover h2 {
+
+    font-size: 36px;
+    margin: 0px;
+    margin-left: 20px;
+    padding-top: 240px;
+    padding-bottom:0px;
+    padding-left: 300px;
+    font-weight: 100;
+}
+
+/* BODY */
+
+
+
+main {
+
+   margin:auto;
+   width: 680px;
+   padding-left:  30%;
+   padding-right: 30%;
+   line-height: 30px;
+}
+
+.first{
+
+padding-left:  7%;
+font-family: 'Josefin Sans' ;
+font-size: 19px;
+font-weight: 500;
+color:#222;
+}
+
+.second{
+
+  font-family: 'Merriweather'
+  padding-left:  7%;
+  font-size: 19px;
+  font-weight: 500;
+  color:#222;
+}
+
+
+
+
+
+/* list type */
+
+li{
+  padding-left: 3%
+  list-style-type: square;
+}
+
+
+
+.Suggestion {
+/*BOX*/
+    background-color: rgb(68, 68, 68);
+    background-size:cover;
+    width: 820px;
+    height: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+/*TEXT*/
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Abril Fatface', cursive;
+
 
 }
 
-.line{  border: 2px solid white;
-  border-top: 2px solid black;
-  padding-top: : 100px;
-  padding-left:
-  width: 550px;
-  font-size: 18px;
-  margin: 30px;}
+.Suggestion span{
+  font-size: 150px;
+  color: white;
+  font-weight: 100;
+  top: 50px;
+  left: -0px;
+  position: relative;
+  margin-bottom: -510px;
+
+}
+
+blockquote{
+    padding-top: 0px;
+    margin-top: 0px;
+    line-height: 40px;
+}
+
+.third{
+  padding-bottom: 50px
+}
+
+h2{
+  padding-left: 7%;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 60px;
+
+}
+
+h3{
+  font-weight: bold;
+  padding-left: 7%;
+}
+
+h4{
+  padding-left: 7%;;
+}
+
+/*NAVIGATION*/
+
+
+
+.nav-left {
+  height: 155px;
+  width: 155px;
+  border-radius: 200px;
+  top: 46%;
+  left: -120px;
+  background-color: rgba(56,56,56,.2);
+  color: rgba(56,56,56,.4);
+  position: fixed;
+  z-index: 5;
+  transition: .2s;
+}
+
+.nav-left:hover {
+  left: -90px;
+  background-color: rgba(56,56,56,.6);
+  transition: .2s;
+}
+
+.nav-right {
+  height: 155px;
+  width: 155px;
+  border-radius: 200px;
+  top: 46%;
+  right: -120px;
+  background-color: rgba(56,56,56,.2);
+  color: rgba(56,56,56,.4);
+  position: fixed;
+  z-index: 5;
+  transition: .2s;
+}
+
+.nav-right:hover {
+  right: -90px;
+  background-color: rgba(56,56,56,.6);
+  transition: .2s;
+}
+
+/*FOOTER*/
+
+footer {
+    width: 680px;
+    border-bottom: 4px solid black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+/* INTEREST */
+
+.interest{
+
+  font-family:'Merriweather';
+  font-size: 15px;
+}
+
+.interest h2{
+  margin-bottom: 70px;
+  text-transform: uppercase;
+
+}
+
+.interest li{
+  font-size: 12px;
+}
+
+/* BOTTOM */
+
+.bottom{
+
+  margin-bottom: 120px;
+}
+
+.first p{
+  font-size: 14px;
+
+
+}
