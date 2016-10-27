@@ -62,7 +62,7 @@ section{
    background-color: #F9F9F9;
 }
 
-#Margaret_Hamilton-picture{
+.Margaret_Hamilton-picture{
    width:220px ;
    height: 280px ;
    padding-left: 26px;
@@ -70,14 +70,14 @@ section{
 
 }
 
-#profile-box-header{
+.profile-box-header{
    text-align: center;
    padding-top: 10px;
    padding-bottom: 7px;
    margin-bottom: 0px;
 }
 
-#Hamilton-picture-info{
+.Hamilton-picture-info{
 text-align: center;
 
 }
@@ -89,4 +89,9 @@ footer{
 
 tr{
    font-size: 0.90rem;
+}
+
+.Navigation-sidebar{
+   background-color: #F6F6F6;
+   width: 175px;
 }

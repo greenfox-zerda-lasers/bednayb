@@ -1,0 +1,58 @@
+.backGround1{
+   width: 811;
+   height: 540px;
+   background-color: black;
+   /*
+   display: flex;
+   justify-content: center;
+   align-items: center;
+*/
+}
+
+button{
+   width: 125px;
+   height: 125px;
+   transform: rotate(45deg);
+
+}
+
+.tom{
+   transform: rotate(-45deg);
+}
+
+.class{
+   transform: rotate(-45deg);
+   font-size: 12px;
+   font-weight: bold;
+}
+
+.square{
+   border: solid 3px;
+   border-color: tomato;
+   width: 125px;
+   height: 125px;
+
+}
+
+.backGround1{
+   color: tomato;
+}
+
+.square:hover {
+    transform: rotate(45deg);
+    transition:  1s;
+
+}
+
+button{
+   position: absolute;
+   top:182px;
+   left: 318px;
+}
+
+.square{
+   position: absolute;
+   top:179px;
+   left: 315px;
+    color:tomato;
+}
