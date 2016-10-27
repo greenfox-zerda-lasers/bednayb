@@ -16,28 +16,10 @@ section{
    /* END OF BORDER FOR HELP */
 }
 
-
-
-
-.list ol {
-  counter-reset: section;                /* Creates a new instance of the
-                                            section counter with each ol
-                                            element */
-  list-style-type: none;
-}
-
-.list li::before {
-  counter-increment: section;            /* Increments only this instance
-                                            of the section counter */
-  content: counters(section,".") " ";    /* Adds the value of all instances
-                                            of the section counter separated
-                                            by a ".". */
-                                         /* if you need to support < IE8 then
-                                            make sure there is no space after
-                                            the ',' */
-
-
-
+.list {
+   width:121px;
+   font-size: 0.85rem;
+  background-color: #F9F9F9;
 }
 
 
@@ -59,7 +41,10 @@ section{
 .profile-box{
    width:270px ;
    height:538px ;
+   border: solid 1px;
    background-color: #F9F9F9;
+   float: right;
+
 }
 
 .Margaret_Hamilton-picture{
@@ -79,6 +64,9 @@ section{
 
 .Hamilton-picture-info{
 text-align: center;
+margin-top: 0px;
+margin-bottom: 3px;
+
 
 }
 
@@ -88,10 +76,62 @@ footer{
 }
 
 tr{
-   font-size: 0.90rem;
+   font-size: 0.85rem;
+}
+td{
+vertical-align:text-top;
 }
 
 .Navigation-sidebar{
    background-color: #F6F6F6;
    width: 175px;
+}
+
+
+
+table{
+   border-collapse: separate;
+
+}
+
+
+.M-H-books, .M-H-actions, .M-H-official{
+   width: 220px;
+   background-color:#F9F9F9;
+   border: solid 1px;
+   border-color: black;
+   font-size: 0.85rem;
+}
+
+ .M-H-official{
+   width: 178px;
+   background-color:#F9F9F9;
+   border: solid 1px;
+   border-color: black;
+   font-size: 0.85rem;
+}
+
+
+aside{
+width: : 170px;
+float:left;
+}
+
+main{
+
+ box-sizing: border-box;
+ width: 1500px;
+ height: 100%;
+ border: 2px solid black;
+ float: left;
+
+}
+
+.list ul{
+    list-style-type: none;
+    padding-left: 8px;
+}
+
+.list-in-list  {
+   padding-left: 12px;
 }
