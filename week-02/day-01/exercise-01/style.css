@@ -1,8 +1,19 @@
-img{
+.leftduck{
     float:left;
 }
 
 .wrapper{
   width:300px;
   height: 300px;
+}
+
+
+footer{
+   border-top: solid 2px;
+   border-color: black;
+   width: 300px;
+}
+
+.rightduck{
+   float: right;
 }

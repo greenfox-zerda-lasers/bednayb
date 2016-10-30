@@ -1,25 +1,27 @@
-header{
-   /* BORDER FOR HELP */
-     border: solid 3px;
-     border-color: red;
-     margin: 3px;
-     /* END OF BORDER FOR HELP */
 
-}
+
+
 
 
 section{
    /* BORDER FOR HELP */
+/*
    border: solid 3px;
    border-color: blue;
    margin: 3px;
+*/
    /* END OF BORDER FOR HELP */
+
+
 }
+
 
 .list {
    width:121px;
-   font-size: 0.85rem;
+   font-size: 1rem;
   background-color: #F9F9F9;
+  padding: 2px;
+  line-height: 120%;
 }
 
 
@@ -27,8 +29,8 @@ section{
 .list{
 
    /* BORDER FOR HELP */
-   border: solid 3px;
-   border-color: yellow;
+   border: solid 1px;
+   border-color:#AAAAAA;
    margin: 3px;
    /* END OF BORDER FOR HELP */
 
@@ -85,6 +87,8 @@ vertical-align:text-top;
 .Navigation-sidebar{
    background-color: #F6F6F6;
    width: 175px;
+   border-right:1px;
+   border-color: #A7D7F9;
 }
 
 
@@ -94,6 +98,11 @@ table{
 
 }
 
+.need-to-float-left{
+   float: left;
+}
+
+
 
 .M-H-books, .M-H-actions, .M-H-official{
    width: 220px;
@@ -101,6 +110,8 @@ table{
    border: solid 1px;
    border-color: black;
    font-size: 0.85rem;
+
+   margin: 3px;
 }
 
  .M-H-official{
@@ -122,8 +133,10 @@ main{
  box-sizing: border-box;
  width: 1500px;
  height: 100%;
- border: 2px solid black;
+
  float: left;
+ border-left: 1px;
+ border-left: lightblue;
 
 }
 
