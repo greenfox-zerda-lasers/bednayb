@@ -1,29 +1,32 @@
-body{
-  width: 450px;
+
+.wrapper{
+  width:600px;
+  height: 477px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #808080;
 }
-
-
-img{
-    float:left;
-}
-
-.right{
-    float:right;
-}
-
-
-
-footer{
-
-
-  border-top: 2px solid;
-}
-
 
 .box{
-  border: 2px solid;
-  width: 300px;
-  height: 200px;
-  border-radius: 25px;
+   width: 180px;
+   height: 140px;
+   background-color: #FF6347;
+   border: solid 5px;
+   border-color: black;
+   margin: 5px;
+}
+
+#middle{
+   position: relative;
+   top:12px;
+   left:12px;
+   text-align: center;
+   font-size: 28px;
+
+}
+
+p{
+   position: relative;
+   top:20px;
 
 }
