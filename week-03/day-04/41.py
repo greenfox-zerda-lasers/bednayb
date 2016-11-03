@@ -11,3 +11,11 @@ students = [
 # has more than 4 candies
 
 
+fat_studnets = 0
+
+for i in range(len(students)):
+    if students[i]["candies"] > 4:
+        fat_studnets +=1
+print(fat_studnets)
+
+''' ha a fat_studnets benne van a forban miert ad mast'''

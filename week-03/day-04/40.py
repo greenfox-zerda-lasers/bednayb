@@ -8,3 +8,9 @@ students = [
 # then returns how many candies are own by students
 # under 10
 
+for i in range(len(students)):
+    if students[i]["age" ] < 10:
+        print(students[i]["name" ],students[i]["candies"])
+
+
+''' egy sorba hogy rakom be? '''
