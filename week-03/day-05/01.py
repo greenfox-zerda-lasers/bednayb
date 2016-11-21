@@ -5,11 +5,11 @@
 class Circle:
 
     def circumference(radius):
-        a = radius * 2 *3.14
+        a = radius * 2 * 3.14
         return a
 
     def get_area(radius):
-        a = radius ** 2 *3.14
+        a = radius ** 2 * 3.14
         return a
 
 

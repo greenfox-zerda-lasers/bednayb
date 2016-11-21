@@ -5,5 +5,7 @@ def decrypt(file_name):
     for line in reversed(list(f.readlines())):
         result += line
 
-    return result
+    print( result)
     f.close()
+
+decrypt("test.txt")

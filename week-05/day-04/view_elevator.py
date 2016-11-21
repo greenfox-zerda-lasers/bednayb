@@ -21,7 +21,7 @@ class View:
                 print("     || ||       || ||       || ||")
 
 
-            print("     || || [",people,"] || ||       || ||")
+            print("     || || [",people,"] || ||       ||_||")
 
 
         else:

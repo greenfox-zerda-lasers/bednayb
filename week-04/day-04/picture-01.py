@@ -21,7 +21,7 @@ def magic(x,y,number,size):
         magic( x+size*2/3,  y+size*1/3, number-1, size*1/3 )
 
 
-        
+
 
 magic(0,0,6,600)
 root.mainloop()

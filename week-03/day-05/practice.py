@@ -1,14 +1,3 @@
-alma = "alabama"
-
-print(alma.count(""))
-print(alma.count(""))
-print(alma.count(""))
-print(alma.count(""))
-print(alma.count(""))
-
-
-
-
-alma = 5
-
-print( alma, "almar")
+x = input("Enter a number: ")
+y = input("Enter a second number: ")
+print('The sum of ', x, ' and ', y, ' is ', x+y, '.', sep='') #error

@@ -10,3 +10,6 @@ with open(fname, 'r') as f:
         biglist.append((line.rstrip().split("x")))
 
 print(biglist)
+
+for i in range(len(biglist)):
+    for j in range()

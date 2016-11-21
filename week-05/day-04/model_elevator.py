@@ -10,6 +10,8 @@
 
 import random
 
+
+
 class Elevator():
 
     def __init__(self,all_levels,current_level,people):

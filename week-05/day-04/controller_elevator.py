@@ -19,6 +19,8 @@
 import random
 import model_elevator
 import view_elevator
+import os
+
 
 
 
@@ -31,28 +33,51 @@ class Controller():
 
     def add_people(self):
         self.Elevator.people += 1
+        os.system('cls' if os.name == 'nt' else 'clear')
         self.View.Picture(self.Elevator.all_levels,self.Elevator.current_level,self.Elevator.people)
 
     def remove_people(self):
         self.Elevator.people -= 1
+        os.system('cls' if os.name == 'nt' else 'clear')
         self.View.Picture(self.Elevator.all_levels,self.Elevator.current_level,self.Elevator.people)
 
     def move_up(self):
         self.Elevator.current_level += 1
+        os.system('cls' if os.name == 'nt' else 'clear')
         self.View.Picture(self.Elevator.all_levels,self.Elevator.current_level,self.Elevator.people)
 
     def move_down(self):
         self.Elevator.current_level -= 1
+        os.system('cls' if os.name == 'nt' else 'clear')
         self.View.Picture(self.Elevator.all_levels,self.Elevator.current_level,self.Elevator.people)
 
 x = Controller()
 
-x.add_people()
-x.remove_people()
-x.add_people()
-x.move_up()
-x.move_up()
-x.move_up()
+
+
+
+
+
+while True:
+
+
+
+    print(" ")
+    print("up ------------- u")
+    print("down ----------- d")
+    print("new person ----- n")
+    print(" a person left - l")
+
+    answer = input("up or down, more or less\n")
+    if answer == "u":
+        x.move_up()
+    if answer == "d":
+        x.move_down()
+    if answer == "n":
+        x.add_people()
+    if answer == "l":
+        x.remove_people()
+
 
 
 

@@ -11,11 +11,11 @@ canvas.pack()
 a=10
 
 def magic(x,y,number,size,number_begin):
-    if number_begin == number:
-        topleft = ( 0, a+0)
-        topright = (size,a+0)
-        bottom = ( size*(3**0.5)/3.46, a+size*(3**0.5)/2)
-        canvas.create_polygon(topleft, topright, bottom, fill='white', outline='purple')
+    # if number_begin == number:
+    #     topleft = ( 0, a+0)
+    #     topright = (size,a+0)
+    #     bottom = ( size*(3**0.5)/3.46, a+size*(3**0.5)/2)
+    #     canvas.create_polygon(topleft, topright, bottom, fill='white', outline='purple')
 
     if number == 1:
         return 1

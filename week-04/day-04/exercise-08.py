@@ -5,8 +5,8 @@ def replaceChar(inval, old, new):
         return ''
     if inval[0] == old:
         return new + replaceChar(inval[1:], old, new)
+    
     return inval[0] + replaceChar(inval[1:], old, new)
-
 x = replaceChar("xsalax","x", "")
 
 print(x)
