@@ -1,7 +1,10 @@
-### CHARACTERS ###
+### MODEL ###
 
 import random
 
+
+
+### CHARACTERS ###
 
 class Characters:
 
@@ -52,3 +55,12 @@ class Boss(Enemy):
         self.current_hp = self.max_hp
         self.defence = self.level / 2 * random.randint(1,6) + random.randint(1,6) /2
         self.strike = random.randint(1,6) + self.level
+
+class Skeleton_with_key(Skeleton):
+    pass
+
+### BATTLE ####
+
+x = Hero()
+
+print(x.level)
