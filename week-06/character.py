@@ -1,7 +1,8 @@
 ### MODEL ###
 
 import random
-
+import map_of_game
+from view import View
 
 
 ### CHARACTERS ###
@@ -19,21 +20,13 @@ class Hero(Characters):
 
         self.level = 1
         self.max_hp = 20 + 3 * random.randint(1,6)
+
         self.defence = 2 * random.randint(1,6)
-        self.strike = 5 + random.randint(1,6)
+        self.strike = 5
         self.current_hp = self.max_hp
+        self.x_pos = 0
+        self.y_pos = 0
 
-    def move_up(self):
-        pass
-
-    def move_down(self):
-        pass
-
-    def move_right(self):
-        pass
-
-    def move_left(self):
-        pass
 
 
 class Enemy(Characters):
@@ -48,13 +41,24 @@ class Skeleton(Enemy):
         self.strike = self.level * random.randint(1,6)
         self.current_hp = self.max_hp
 
+
+        self.map = map_of_game.Game_Map()
+
 class Boss(Enemy):
     def __init__(self):
+
         self.level = 1
         self.max_hp = 2 * self.level * random.randint(1,6) + random.randint(1,6)
         self.current_hp = self.max_hp
         self.defence = self.level / 2 * random.randint(1,6) + random.randint(1,6) /2
         self.strike = random.randint(1,6) + self.level
+        self.map = map_of_game.Game_Map()
+
+        self.x_pos = random.randint(1,10)
+        self.y_pos = random.randint(1,11)
+
+
+
 
 class Skeleton_with_key(Skeleton):
     pass
@@ -62,5 +66,6 @@ class Skeleton_with_key(Skeleton):
 ### BATTLE ####
 
 x = Hero()
+
 
 print(x.level)
