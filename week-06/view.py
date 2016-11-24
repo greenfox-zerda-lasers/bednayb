@@ -3,6 +3,7 @@ from PIL import Image, ImageTk
 
 
 
+
 class View():
 
     def __init__(self):
@@ -54,6 +55,12 @@ class View():
         self.canvas.create_image(72 + (boss_x_pos)  * self.size, 72 + (boss_y_pos) * self.size, image = self.boss)
         print(boss_x_pos)
         print(boss_y_pos)
+
+    def display_skeleton(self, skeleton_x_pos,skeleton_y_pos):
+
+        self.canvas.create_image(72 + (skeleton_x_pos)  * self.size, 72 + (skeleton_y_pos) * self.size, image = self.skeleton)
+        print(skeleton_x_pos)
+        print(skeleton_y_pos)
 
    ### DISPLAY FLOOR ###
 

@@ -40,8 +40,6 @@ class Skeleton(Enemy):
         self.defence = self.level / 2 * random.randint(1,6)
         self.strike = self.level * random.randint(1,6)
         self.current_hp = self.max_hp
-
-
         self.map = map_of_game.Game_Map()
 
 class Boss(Enemy):
@@ -54,8 +52,7 @@ class Boss(Enemy):
         self.strike = random.randint(1,6) + self.level
         self.map = map_of_game.Game_Map()
 
-        self.x_pos = random.randint(1,10)
-        self.y_pos = random.randint(1,11)
+
 
 
 

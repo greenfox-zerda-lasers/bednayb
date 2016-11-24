@@ -16,11 +16,7 @@ class Battle:
 
         ### HERO AND BOSS POSOTION ###
 
-        # print("hero x",self.hero.x_pos)
-        # print(self.hero.y_pos)
-        # print("boss x",self.boss.x_pos)
-        # print(self.boss.y_pos)
-
+    
 
         if self.hero.x_pos == self.boss.x_pos and self.hero.y_pos == self.boss.y_pos:
 
