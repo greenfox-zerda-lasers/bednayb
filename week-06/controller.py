@@ -21,6 +21,7 @@ class Control:
         self.battle = Battle(self.hero, self.boss)
 
 
+
         self.input_event()
         self.view.display_hero_down(72 + self.hero.x_pos * self.view.size, 72 + self.hero.y_pos * self.view.size)
         self.view.root.mainloop()
@@ -50,22 +51,37 @@ class Control:
 
 
         # while self.map.board[self.boss.y_pos][self.boss.x_pos] == 1 and (x_pos != self.boss.x_pos):
-
-        self.alma = random.randint(1,4)
-
-        if self.alma == 1:
+        self.korte = random.randint(1,4)
+        if self.korte == 1:
             self.boss.x_pos += 1
-        elif self.alma == 2:
+        elif self.korte == 2:
             self.boss.y_pos += 1
-        elif self.alma == 3:
+        elif self.korte == 3:
             self.boss.x_pos -= 1
-        elif self.alma == 4:
+        elif self.korte == 4:
             self.boss.y_pos -= 1
 
-        if self.map.board[self.boss.y_pos][self.boss.x_pos] == 1:
-             self.view.display_floor(72 + x_pos * self.view.size, 72 + y_pos * self.view.size)
-             self.view.display_boss(self.boss.x_pos,self.boss.y_pos)
+        if self.boss.x_pos < 0 or self.boss.y_pos < 0 or self.boss.x_pos > 9 or self.boss.y_pos > 10:
+            self.boss.x_pos = x_pos
+            self.boss.y_pos = y_pos
+            self.boss_move()
+            return
+
+        if self.map.board[self.boss.y_pos][self.boss.x_pos] != 1:
+            self.boss.x_pos = x_pos
+            self.boss.y_pos = y_pos
+            self.boss_move()
+            return
+
+
+
+        self.view.display_floor(72 + x_pos * self.view.size, 72 + y_pos * self.view.size)
+        self.view.display_boss(self.boss.x_pos,self.boss.y_pos)
+        print("BX",self.boss.x_pos)
+        print("BY",self.boss.y_pos)
         ### SKELETON NUMBERS AND POSITION ###
+
+
 
     def skeletons_position(self):
         skeleton_numbers = random.randint(2,5)
@@ -81,6 +97,9 @@ class Control:
                 x_pos += random.randint(-1,1)
                 y_pos += random.randint(-1,1)
             self.view.display_skeleton(x_pos,y_pos)
+
+
+
 
 
 
@@ -128,7 +147,8 @@ class Control:
                  self.draw_game_map("down")
                  self.battle.fight()
                  self.boss_move()
-
+                 self.battle.fight()
+                 self.finish_him()
 
     def move_up(self,event):
 
@@ -146,7 +166,8 @@ class Control:
                  self.draw_game_map("up")
                  self.battle.fight()
                  self.boss_move()
-
+                 self.battle.fight()
+                 self.finish_him()
 
     def move_left(self,event):
 
@@ -164,7 +185,8 @@ class Control:
                  self.draw_game_map("left")
                  self.battle.fight()
                  self.boss_move()
-
+                 self.battle.fight()
+                 self.finish_him()
 
     def move_right(self,event):
 
@@ -182,7 +204,8 @@ class Control:
                  self.draw_game_map("right")
                  self.battle.fight()
                  self.boss_move()
-
+                 self.battle.fight()
+                 self.finish_him()
 
 
     def draw_game_map(self,direction):
@@ -197,6 +220,13 @@ class Control:
 
             ### END OF HERO MOVING ###
 
+
+
+        ### FINISH HIM ###
+
+    def finish_him(self):
+        if self.boss.hp <= 0:
+            self.view.display_finishhim()
 
 
 

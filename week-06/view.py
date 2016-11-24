@@ -23,6 +23,7 @@ class View():
         self.skeleton = PhotoImage(file = "skeleton.png")
         self.boss = PhotoImage(file = "boss.png")
 
+        self.finish_him = PhotoImage(file = "finish.png")
 
     ### DISPLAY MAP ###
     def display_map(self,Game_Map):
@@ -59,10 +60,10 @@ class View():
     def display_skeleton(self, skeleton_x_pos,skeleton_y_pos):
 
         self.canvas.create_image(72 + (skeleton_x_pos)  * self.size, 72 + (skeleton_y_pos) * self.size, image = self.skeleton)
-        print(skeleton_x_pos)
-        print(skeleton_y_pos)
+
 
    ### DISPLAY FLOOR ###
+
 
     def display_floor(self, hero_x_pos,hero_y_pos):
         self.canvas.create_image(hero_x_pos, hero_y_pos, image = self.floor)
@@ -71,3 +72,8 @@ class View():
 
     def battle_view(self):
         self.canvas.create_image(1000, 800, image = self.floor)
+
+    ## DISPLAY FINISH HIM ###
+
+    def display_finishhim(self):
+        self.canvas.create_image(900, 100, image = self.finish_him)

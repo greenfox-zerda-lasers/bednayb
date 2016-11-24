@@ -13,3 +13,10 @@ class Game_Map:
                        [1,0,1,0,1,0,0,1,0,1],
                        [1,1,1,0,1,0,0,1,0,1],
                        [1,0,1,0,1,0,1,1,1,1]]
+
+
+    def is_valid(self,x,y):
+        if self.board[y][x] == 1:
+            return True
+        else:
+            return False
