@@ -148,7 +148,7 @@ class Control:
                  self.battle.fight()
                  self.boss_move()
                  self.battle.fight()
-                 self.finish_him()
+                #  self.finish_him()
 
     def move_up(self,event):
 
@@ -167,7 +167,7 @@ class Control:
                  self.battle.fight()
                  self.boss_move()
                  self.battle.fight()
-                 self.finish_him()
+                #  self.finish_him()
 
     def move_left(self,event):
 
@@ -186,7 +186,7 @@ class Control:
                  self.battle.fight()
                  self.boss_move()
                  self.battle.fight()
-                 self.finish_him()
+                #  self.finish_him()
 
     def move_right(self,event):
 
@@ -205,7 +205,7 @@ class Control:
                  self.battle.fight()
                  self.boss_move()
                  self.battle.fight()
-                 self.finish_him()
+                #  self.finish_him()
 
 
     def draw_game_map(self,direction):
