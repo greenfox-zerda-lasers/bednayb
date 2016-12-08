@@ -10,9 +10,20 @@
   <p class="output2">fox</p>
 
   <script>
-    // fill output1 with the first paragraph's content, text only.
-    // fill output2 with the first paragraph's content keeping the cat strong.
+   //  // fill output1 with the first paragraph's content, text only.
+   //  // fill output2 with the first paragraph's content keeping the cat strong.
+    var neededTextFromFirstP = document.querySelector("body p");
+    // console.log(neededTextFromFirstP);
+    //1
+    var output1TextModify = document.querySelector(".output1");
+    // console.log(output1TextModify);
+    output1TextModify.textContent = neededTextFromFirstP.textContent;
+
+    //2
+    var output2TextModify = document.querySelector(".output2");
+    output2TextModify.innerHTML = neededTextFromFirstP.innerHTML;
   </script>
+
   <script src="content-3.js"></script>
 </body>
 </html>
