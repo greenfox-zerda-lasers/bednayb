@@ -1,0 +1,78 @@
+/*MAIN PICTURES*/
+
+#image-wrapper {
+   
+
+   width: 360px;
+   height:: 560px;
+    background: url(luffy.png) no-repeat;
+    background-size: contain;
+}
+
+.navigation-and-picture {
+    display: flex;
+    justify-content: space-around;
+    height: 540px;
+
+}
+
+.navigation {
+    height: 30px;
+    position: relative;
+    top: 250px;
+    background: url(left.svg) no-repeat;
+    margin: 20px;
+}
+
+#next {
+    transform: rotate(180deg);
+}
+
+#slide-1 {
+   background: url(luffy.png) no-repeat;
+   background-size: contain;
+}
+.slides button {
+    position: relative;
+    left: 30%;
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+}
+
+
+#slide-2 {
+    background: url(franky.png) no-repeat;
+    background-size: contain;
+}
+
+#slide-3 {
+    background: url(sanji.png) no-repeat;
+    background-size: contain;
+}
+
+#slide-4 {
+    background: url(zoro.png) no-repeat;
+    background-size: contain;
+}
+
+#slide-5 {
+    background: url(brook.png) no-repeat;
+    background-size: contain;
+}
+
+#slide-6 {
+    background: url(nami.png) no-repeat;
+    background-size: contain;
+}
+
+h1 {
+    /*give a nice font family*/
+    font-size: 50px;
+    text-align: center;
+}
+
+body {
+    /*background-color: red*/
+}
