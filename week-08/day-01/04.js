@@ -71,7 +71,7 @@ Carrier.prototype.fill = function(){
    element.ammo = element.maxAmmo;
    return battleship.ammoLoaded;
 }else{
-   console.log("we dont have enough ammo");
+   return Error("not enough ammo")
    // return "we dont have enough ammo"
 }
 
@@ -83,7 +83,7 @@ Carrier.prototype.fight = function(){
    damage += (element.baseDamage * element.ammo);
    element.ammo = 0;
 });
-return damage
+return Error("not enough ammo")
 };
 
 var plane1 = new Aircrafts('F-16');
