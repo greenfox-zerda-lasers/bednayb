@@ -26,18 +26,6 @@ countLetters("almafa")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
  // NICE SOLUTION
 
 // function countLetters(string){

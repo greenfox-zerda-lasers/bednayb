@@ -1,10 +1,10 @@
+
 from view import View
 import map_of_game
 import character
-import tkinter
 from battle import Battle
 
-
+import tkinter
 import random
 
 
@@ -19,12 +19,10 @@ class Control:
         self.boss_position()
         self.skeletons_position()
         self.battle = Battle(self.hero, self.boss)
-
-
-
         self.input_event()
         self.view.display_hero_down(72 + self.hero.x_pos * self.view.size, 72 + self.hero.y_pos * self.view.size)
         self.view.root.mainloop()
+
 
         ### BOSS POSITION ###                                ### IN THE FUTURE MOVE TO THE CHARACTERS ###
     def boss_position(self):
@@ -116,26 +114,11 @@ class Control:
         self.view.root.bind('<d>', self.move_right)
 
 
-        ### CODE ###
-        self.view.root.bind('<p>', self.code_of_game)
 
-
-
-    def code_of_game(self, event):
-
-        if event.char == "p":
-            code = input("write a code")
-
-            if code == "kiki":
-                print("You are immortal")
-        ### END OF THE CODE ###
 
     def move_down(self, event):
 
         if event.char == "s":
-
-
-
 
             if self.map.board[self.hero.y_pos + 1][self.hero.x_pos] != 1 or self.hero.y_pos == 10:
 

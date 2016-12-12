@@ -26,13 +26,13 @@ def magic(x,y,number,size,number_begin):
         teal_line = canvas.create_line( x + size *1/4 ,a+ y + size*(3**0.5)/4,  x + size *3/4, a+y + size*(3**0.5)/4,fill='green')
 
         number -= 1
-
-        magic(x,y,number,size/2,number_begin)
-        magic(x+size/2,y,number,size/2,number_begin)
-        magic(x+size/4,y+size*(3**0.5)/4,number,size/2,number_begin)
-
-
-
+    #
+    #     magic(x,y,number,size/2,number_begin)
+    #     magic(x+size/2,y,number,size/2,number_begin)
+    #     magic(x+size/4,y+size*(3**0.5)/4,number,size/2,number_begin)
+    #
+    #
+    #
     time.sleep(0.01)
     canvas.update()
 
@@ -43,4 +43,5 @@ canvas.create_text(300,550,fill="green",font="Times 30 italic bold",text="GREENF
 
 magic(0,0,7,600,7)
 
-root.mainloop()
+def input_event(self):
+        self.view.root.bind('<s>', self.root.mainloop())

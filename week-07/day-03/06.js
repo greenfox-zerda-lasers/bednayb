@@ -6,6 +6,6 @@
 
 function checkTheLetters(string,letter){
   return string.split('').indexOf(letter) != -1
-}
+};
 
-checkTheLetters("alma","b")
+console.log("found:"+checkTheLetters("apple tree","b"));
