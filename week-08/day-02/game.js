@@ -43,7 +43,7 @@ function generateCandy(){
    document.querySelector(".candies").innerHTML = candy;
    document.querySelector(".speed").innerHTML = plusCandy;
    if(candy > 10000){
-      alert("you win")
+      console.log("you win");
    }
    setTimeout(generateCandy,1000)
 };
