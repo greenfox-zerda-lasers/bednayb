@@ -3,3 +3,14 @@
 //  - Create an image tag in the with document.createElement
 //  - Add a 'load' event to the image and only show the image to the user when the image is loaded
 
+
+
+
+
+
+
+document.addEventListener('load', function() {
+  document.body.style.backgroundColor = "white";
+});
+
+console.log(document);
