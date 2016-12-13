@@ -1,2 +1,11 @@
-// create a function that starts a setTimeout with a 3 second delay.
-// - create a button with an event listener that can cancel the setTimeout
+
+
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(function(){ alert("Hello"); }, 3000);
+}
+
+function myStopFunction() {
+    clearTimeout(myVar);
+}
