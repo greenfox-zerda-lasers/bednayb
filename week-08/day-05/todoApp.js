@@ -2,7 +2,9 @@
 
 var addButton = document.querySelector("#addNewElement");
 var inputText = document.querySelector("#inputItem");
-var deleteButton = document.querySelector("#deleteButton");
+var deleteButton = document.querySelector(".deleteButton");
+
+
 
 ////////////READY/////////////// ADD NEW TASK  ////////////////////////////////////////
 function addNewTask(task){
@@ -23,7 +25,16 @@ function addNewTask(task){
    function addElement(){
       addNewTask(inputItem.value);
    }
+
+var alma = addNewTask(inputItem.value);
 ///////////////////////////////// END OF ADD NEW TASK  ////////////////////////////////////////
+
+// // UPDATE//
+setInterval(alma,3000);
+// // UPDATE//
+
+
+
 
 /////////NOT READY////////////////////// CHECK THE STATUS  ////////////////////////////////////////////
 
@@ -45,22 +56,56 @@ function getNewElement(){
 }getNewElement();
 
       function DisplayItem(Items){
-         console.log(Items);
+         
          Items.forEach(function(e, i) {
-         var itemToView = document.createElement('li');
-         var todoLabel = document.createElement('label');
-         var todoText = document.createElement('p');
 
-         todoLabel.setAttribute('class', 'todo-item');
-         todoLabel.setAttribute('for', 'list-item-' + i);
-         todoText.textContent = e.text;
+            var task = document.createElement('div');
+            // var itemToView = document.createElement('li');
+            var span = document.createElement('span');
+            var todoLabel = document.createElement('label');
+            var todoText = document.createElement('p');
+            var trash = document.createElement('img');
+            trash.id = e.id;
+            trash.addEventListener("click", function(){
+               deleteToDo(e.id)
+            });
+            var newCheckBox = document.createElement('input');
+            trash.src = 'delete.png';
+            newCheckBox.type = 'checkbox';
+
+
+            listnewitem.appendChild(task);
+            task.appendChild(span);
+            span.appendChild(todoText);
+            // span.appendChild(todoLabel);
+            span.appendChild(trash);
+            span.appendChild(newCheckBox);
+            // itemToView.appendChild(todoText);
+
+            todoText.innerHTML = e.text;
+            // todoText.textContent = e.text;
+            // task.innerHTML = e;
+
+            // console.log(e);
+            // console.log(i);
+            // console.log(e.text);
+
+            // setInterval(DisplayItem(Items), 2000);
+
+
+            // todoLabel.setAttribute('class', 'todo-item');
+            // todoLabel.setAttribute('for', 'list-item-' + i);
       })
-   }
+   };
 
 //////////////////////////////// END OF CHECK THE STATUS //////////////////////////////////////
 
-///////////NOT READY/////////// DELETE /////////////////////////////////////////////////////
-deleteButton.addEventListener("click", deleteToDo('8'));
+///////////70% READY/////////// DELETE /////////////////////////////////////////////////////
+
+
+
+
+
 
 
 function deleteToDo(index) {
