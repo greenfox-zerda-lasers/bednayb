@@ -8,11 +8,23 @@ html {
 .todoApp{
    border: solid 2px;
    border-color: red;
+   width:60%;
+   min-width: 200px;
+   margin: auto;
+   margin-top: 50px;
+   background-color: #f7f7f7;
 }
 
 .heading{
+   font-family: Lato-Light, sans-serif;
+   font-size: 64px;
+   color: #ABABAB;
+   font-weight: lighter;
    border: solid 2px;
    border-color: blue;
+   width: 50%;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .list-item{
@@ -23,4 +35,64 @@ html {
 .add-new-item{
    border: solid 2px;
    border-color: green;
+   width: 75%;
+   height: 50px;
+   margin: auto;
+   display: flex;
+   justify-content: flex-start;
 }
+
+button{
+   border: none;
+}
+
+li{
+    font-family: Lato-Regular, sans-serif;
+    font-size: 26px;
+    line-height: 2.2;
+    /*REAL COLOR*/
+    /*color: #B7B7B7;*/
+    color: red;
+}
+
+.new-item{
+   background-color: #DF69E8;
+}
+
+.input-item{
+   height: 44px;
+   width: 200px;
+   margin: 0px;
+}
+
+button.new-item{
+   height: 50px;
+   margin: 0px;
+   width: 60px;
+}
+
+ul{
+   width: 78%;
+   margin-left: 0px;
+   list-style-type: none;
+   text-align: left;
+}
+
+/*NEW STUFF*/
+
+.delete-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.delete-checkbox label:before {
+  font-family: "FontAwesome";
+  font-style: normal;
+  width: 1em;
+  height: 1em;
+  content: '\f014';
+  margin-right: .3em;
+}
+
+/*.delete-checkbox input[type="checkbox"]:checked ~ label:before {
+  color: red;
+}*/
