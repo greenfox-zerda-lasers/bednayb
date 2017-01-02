@@ -8,24 +8,57 @@
    <body>
       <article class="foxplayer">
 
-      <div class="wrapper">
-         <section id='logo'>
-            <!-- <img src="./images/foxplayer.png"> -->
-         </section>
+<div class="wrapper">
 
-         <section id='currentlySong'>
-            currentlysong
-         </section>
+      <div class="leftside">
+         <div class="topleft">
+            <section id='logo'></section>
+            <section id='artwork'></section>
+         </div>
+            <section id='playlist'>
+               <h2>Playlist</h2>
+               <img src="images/plus.svg" class="playlist-plus-icon" width="16px">
+               <ul>
+                  <li>All tracks</li>
+                  <li> Favorites</li>
+               </ul>
+            </section>
       </div>
 
-         <section id='tracks'>traks
 
-         </section>
+   <div id="rightside">
+      <section id='currentlySong'>
+         <h2>CurrentlySong</h2>
+         <p>Artist</p>
+         <img src="images/plus.svg" class="plus-icon" width="16px">
+         <img src="images/star.svg" class="star-icon" width="16px">
+      </section>
+      <div>
+         <section id='tracks'>
 
-         <section id='playlists'>playlist
+         <ol>
+            <li>alma</li>
+            <li>korte</li>
+            <li>citrom</li>
+            <li>citrom2</li>
+            <li>citrom3</li>
+            <li>citrom3</li>
+            <li>citrom3</li>
+            <li>citrom3</li>
+            <li>citrom3</li>
+            <li>citrom6</li>
+            <li>citrom3</li>
+            <li>citrom3</li>
+            <li>citrom3</li>
+            <li>citrom9</li>
+            <li>citrom3</li>
+         </ol>
+      </section>
+      </div>
+   </div>
+</div>
 
 
-         </section>
          <section class="controll_Panel">
 
              <audio  id="audio" src="Purple_Drift.mp3" controls></audio>
@@ -37,11 +70,14 @@
              <!-- needs  jump  back by songs -->
 
              <button class="backward-btn"><img src="images/rewind.svg" alt=""></button>
-             <button class="play-btn"><img src="images/play.svg" alt=""></button>
+             <button class="play-btn"><img src="images/play2.svg" alt="" width="16px"></button>
              <button class="forward-btn"><img src="images/forward.svg" alt=""></button>
              <!-- needs  jump forward by songs -->
                <button class='next-song'>next song</button>
              <!-- needs  jump forward by songs -->
+         </div>
+
+         <div class="play">
 
          </div>
      </section>

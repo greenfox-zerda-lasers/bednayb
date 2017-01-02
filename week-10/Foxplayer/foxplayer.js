@@ -25,7 +25,6 @@ let playPause = ()=> {
     } else {
         audio.pause();
         document.querySelector('.play-btn').innerHTML = "<img src='images/pause.svg' />";
-
     }
 }
 
@@ -58,3 +57,16 @@ document.querySelector('.next-song')
    }
         audio.src = playlist[currentSong];
      });
+
+////////ICONS////////
+
+document.querySelector('.plus-icon').addEventListener('click', ()=>{
+      console.log('plus');
+});
+
+document.querySelector('.star-icon').addEventListener('click', ()=>{
+      console.log('star');
+});
+document.querySelector('.playlist-plus-icon').addEventListener('click', ()=>{
+      console.log('playlist-star');
+});
