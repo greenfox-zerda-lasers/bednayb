@@ -8,13 +8,16 @@
    <body>
       <article class="foxplayer">
 
+      <div class="wrapper">
          <section id='logo'>
-            logo
+            <!-- <img src="./images/foxplayer.png"> -->
          </section>
 
          <section id='currentlySong'>
             currentlysong
          </section>
+      </div>
+
          <section id='tracks'>traks
 
          </section>
@@ -23,9 +26,25 @@
 
 
          </section>
-         <section id='controlpanel'>controlpanel
+         <section class="controll_Panel">
 
-         </section>
+             <audio  id="audio" src="Purple_Drift.mp3" controls></audio>
+         <div class="row control-div">
+
+
+             <!-- needs  jump  back by songs -->
+             <button class='prev-song'>prev song</button>
+             <!-- needs  jump  back by songs -->
+
+             <button class="backward-btn"><img src="images/rewind.svg" alt=""></button>
+             <button class="play-btn"><img src="images/play.svg" alt=""></button>
+             <button class="forward-btn"><img src="images/forward.svg" alt=""></button>
+             <!-- needs  jump forward by songs -->
+               <button class='next-song'>next song</button>
+             <!-- needs  jump forward by songs -->
+
+         </div>
+     </section>
       </article>
 
    </body>

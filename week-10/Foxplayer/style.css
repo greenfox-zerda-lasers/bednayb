@@ -5,12 +5,12 @@
    margin: auto;
 }
 
-}
+
 
 #logo{
-   width: 365px;
-   height: 135px;
-   background-color: red;
+   width: 200px;
+   background-image: url('./images/foxplayer.png');
+   background-repeat: no-repeat;
 }
 
 #currentlySong{
@@ -19,7 +19,7 @@
    background-color: green;
 }
 
-#controlpanel{
+.controll_Panel{
    position: relative;
    width: 100%;
    background-color: yellow
@@ -34,8 +34,10 @@
 
 section{
    height: 100px;
-   width: 100px;
-   background-color: blue;
-   /*border-style: solid;
-   border-width: 5px;*/
+   border: solid 2px;
+   border-color: red;
+}
+
+.wrapper{
+   display: flex;
 }
