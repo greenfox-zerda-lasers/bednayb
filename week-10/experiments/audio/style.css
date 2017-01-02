@@ -1,0 +1,11 @@
+
+.controll_Panel{
+    width: 700px;
+    border: solid 2px;
+    border-color: red;
+}
+
+
+button {
+    margin-right: 10px;
+}
