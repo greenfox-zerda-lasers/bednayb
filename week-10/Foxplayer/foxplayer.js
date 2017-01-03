@@ -4,9 +4,9 @@
 
 ////////// Tracks  //////////
 let playlist = [
-               {id:2, name:"Doctor_Turtle_-_Doctor_Talos_Answers_The_Door.mp3", author:"bandi"},
-               {id:3, name:"Ars_Sonor_-_02_-_Never_Give_Up.mp3", author:"bendeguz"},
-               {id:1, name:"Purple_Drift.mp3", author:"bela"}
+               {id:1, name:"Purple_Drift.mp3", time: "3:29", author:"bela"},
+               {id:2, name:"Doctor_Turtle_-_Doctor_Talos_Answers_The_Door.mp3", time: "2:55", author:"bandi"},
+               {id:3, name:"Ars_Sonor_-_02_-_Never_Give_Up.mp3", time: "2:15", author:"bendeguz"}
 ];
 let currentSong = 0;
 
@@ -75,8 +75,19 @@ starIcon.addEventListener('click', ()=>{
 
 // Add playlist
 addPlaylist.addEventListener('click', ()=>{
+   let playLists = document.querySelector('.playlists');
+   let name = prompt("What is the new Playlist's name?");
    console.log('playlist-star');
-   let task = document.createElement('div');
+   let task = document.createElement('li');
+   task.className = 'playlist-'+ name;
+
+   playLists.appendChild(task);
+   task.innerHTML = name;
+   let deleteIcon = document.createElement('img');
+   deleteIcon.className = "delete-icon" + ' '+ 'delete-'+ name;
+   deleteIcon.src = 'images/plus.svg';
+   task.appendChild(deleteIcon);
+
 });
 
 
