@@ -1,8 +1,16 @@
 'use strict';
 
+//////////////////////////VARIABLES//////////////////////////
+
 ////////// Tracks  //////////
-let playlist = ["Purple_Drift.mp3","Doctor_Turtle_-_Doctor_Talos_Answers_The_Door.mp3","Ars_Sonor_-_02_-_Never_Give_Up.mp3"];
+let playlist = [
+               {id:2, name:"Doctor_Turtle_-_Doctor_Talos_Answers_The_Door.mp3", author:"bandi"},
+               {id:3, name:"Ars_Sonor_-_02_-_Never_Give_Up.mp3", author:"bendeguz"},
+               {id:1, name:"Purple_Drift.mp3", author:"bela"}
+];
 let currentSong = 0;
+
+
 
 ////////// Controller  //////////
 let audio = document.querySelector('#audio');
@@ -28,42 +36,57 @@ audio.addEventListener('click', ()=>{
     playPause();
 });
 
-//////////////////////////CONTROLLER EVENTS//////////////////////////
+////////////////////////// EVENTS//////////////////////////
 
-// JUMP TIME (BONUS)
+// JUMP TIME FORWARD (BONUS)
 forward.addEventListener('click', ()=>{
   audio.currentTime = audio.currentTime + 10;
 });
 
+// JUMP TIME BACKWARD (BONUS)
 backward.addEventListener('click', ()=>{
   audio.currentTime = audio.currentTime - 10;
 });
 
 // CHANGE THE SONG
 prevSong.addEventListener('click', ()=>{
-  if(currentSong != 0){
+  if(currentSong !== 0){
    currentSong -= 1;
-}
-audio.src = playlist[currentSong];
-     });
+   }
+   audio.src = playlist[currentSong].name;
+});
 
 nextSong.addEventListener('click', ()=>{
   if(currentSong != playlist.length - 1){
-    currentSong += 1
+    currentSong += 1;
     }
-    audio.src = playlist[currentSong];
-     });
+    audio.src = playlist[currentSong].name;
+});
 
 ////////ICON EVENTS (not ready)////////
+
+
 plusIcon.addEventListener('click', ()=>{
    console.log('plus');
 });
 starIcon.addEventListener('click', ()=>{
    console.log('star');
 });
+
+// Add playlist
 addPlaylist.addEventListener('click', ()=>{
    console.log('playlist-star');
+   let task = document.createElement('div');
 });
+
+
+//////////FUNCTIONS ////////////////////
+
+//LOAD THE FIRST SONG
+
+let firstSong = ()=>{
+   audio.src = playlist[currentSong].name;
+};firstSong();
 
 // PLAY/PAUSE FUNCTION
 let playPause = ()=>{
@@ -74,4 +97,8 @@ let playPause = ()=>{
       audio.pause();
       playAndPause.innerHTML = "<img src='images/pause.svg' />";
    }
-}
+};
+
+// ADD NEW PLAYLIST ELEMENT FUNCTION
+
+// LIST PLAYLISTS ON LEFT PANEL
