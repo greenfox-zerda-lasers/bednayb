@@ -19,39 +19,27 @@
                <h2>Playlist</h2>
                <img src="images/plus.svg" class="playlist-plus-icon" width="16px">
                <ul class ="playlists">
-                  <li class="playlist-All-tracks">All tracks</li>
-                  <li class="playlist-Favorites"> Favorites</li>
+                  <li id="playlist-All-tracks" class="everyplaylists" draggable="true" ondragstart="drag(event)">All tracks</li>
+                  <li id="playlist-Favorites" class="everyplaylists" draggable="true" ondragstart="drag(event)"> Favorites</li>
                </ul>
             </section>
       </div>
 
 
+
+
    <div id="rightside">
       <section id='currentlySong'>
-         <h2>CurrentlySong</h2>
-         <p>Artist</p>
+         <h2 class="currentlySongName">CurrentlySong</h2>
+         <p class="currentlyArtistName">Artist</p>
          <img src="images/plus.svg" class="plus-icon" width="16px">
          <img src="images/star.svg" class="star-icon" width="16px">
       </section>
       <div>
          <section id='tracks'>
 
-         <ol>
-            <li>alma</li>
-            <li>korte</li>
-            <li>citrom</li>
-            <li>citrom2</li>
-            <li>citrom3</li>
-            <li>citrom3</li>
-            <li>citrom3</li>
-            <li>citrom3</li>
-            <li>citrom3</li>
-            <li>citrom6</li>
-            <li>citrom3</li>
-            <li>citrom3</li>
-            <li>citrom3</li>
-            <li>citrom9</li>
-            <li>citrom3</li>
+         <ol id ="songsOfFolder">
+
          </ol>
       </section>
       </div>
@@ -66,14 +54,14 @@
 
 
              <!-- needs  jump  back by songs -->
-             <button class='prev-song'>prev song</button>
+             <button class='prev-song control-btn'>prev song</button>
              <!-- needs  jump  back by songs -->
 
-             <button class="backward-btn"><img src="images/rewind.svg" alt=""></button>
-             <button class="play-btn"><img src="images/play2.svg" alt="" width="16px"></button>
-             <button class="forward-btn"><img src="images/forward.svg" alt=""></button>
+             <button class="backward-btn control-btn"><img src="images/rewind.svg" alt=""></button>
+             <button class="play-btn control-btn"><img src="images/play2.svg" alt="" width="16px"></button>
+             <button class="forward-btn control-btn"><img src="images/forward.svg" alt=""></button>
              <!-- needs  jump forward by songs -->
-               <button class='next-song'>next song</button>
+               <button class='next-song control-btn'>next song</button>
              <!-- needs  jump forward by songs -->
          </div>
 
@@ -83,9 +71,12 @@
      </section>
       </article>
 
-      
+      <p>favorites</p>
+      <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
 
    </body>
    <script src="foxplayer.js"></script>
-   <script src="ajax.js"></script>
+   <!-- <script src="ajax.js"></script> -->
+   <!-- <script src="drop.js"></script> -->
 </html>

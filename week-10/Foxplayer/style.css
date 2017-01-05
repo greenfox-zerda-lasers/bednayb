@@ -1,4 +1,3 @@
-
 /***** Foxplayer *****/
 
 .foxplayer{
@@ -68,9 +67,7 @@
 
 }
 
-
 /***** Tracks *****/
-
 #tracks p {
   color: #a9a9a9;
   font-size: 16px;
@@ -131,10 +128,40 @@ h2 {
    margin-left: auto;
 }
 
-
 .playlists{
    height: 175px;
    overflow: scroll;
    overflow-y: visible;
    overflow-x: hidden;
+}
+
+.controll_Panel{
+   background-color: #FAFAFA;
+}
+
+#audio{
+   position: relative;
+   left: 220px;
+   top: 27px;
+   width: 250px;
+   z-index: 1;
+   overflow: hidden;
+}
+
+.currentlySongName{
+   /*color: #a9a9a9;*/
+   font-size: 16px;
+}
+.currentlyArtistName{
+   color: #a9a9a9;
+   font-size: 16px;
+   position: relative;
+   top: -10px;
+}
+
+.div1 {
+    width: 350px;
+    height: 570px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
 }
