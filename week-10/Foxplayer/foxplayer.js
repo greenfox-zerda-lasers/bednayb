@@ -128,10 +128,7 @@ addPlaylist.addEventListener('click', ()=>{
    deleteIcon.src = 'images/plus.svg';
    task.appendChild(deleteIcon);
 
-   console.log(Allplaylist);
-   var newlist = ["alma"];
-   Allplaylist.push(newlist);
-   console.log(Allplaylist[2][0]);
+
 
 
 
@@ -167,28 +164,34 @@ let playPause = ()=>{
 // LIST PLAYLISTS ON LEFT PANEL
 
 // LOAD the list to the right panel
-
-playlistAllSong.addEventListener('click', ()=>{
-   document.getElementById("songsOfFolder").remove();
-
-   let newOl  = document.createElement('ol');
-   newOl.setAttribute('id','songsOfFolder');
-   tracks.appendChild(newOl);
-
-
-   let playLists = document.querySelector('#songsOfFolder');
-   for(let i = 0; i < playlist.length; i++){
-
-      let task = document.createElement('li');
-      task.setAttribute('class','currentlySongList');
-      // task.className = 'song-'+ name;
-      // task.setAttribute("id","song-"+ name);
-      // newOl.appendChild(task);
-      playLists.appendChild(task);
-      task.innerHTML = playlist[i].name + "     " + playlist[i].time;
-
-   }
-});
+//
+// playlistAllSong.addEventListener('click', ()=>{
+//    document.getElementById("songsOfFolder").remove();
+//
+//    let newOl  = document.createElement('ol');
+//    newOl.setAttribute('id','songsOfFolder');
+//    tracks.appendChild(newOl);
+//
+//
+//    let playLists = document.querySelector('#songsOfFolder');
+//    for(let i = 0; i < playlist.length; i++){
+//
+//       let task = document.createElement('li');
+//       task.setAttribute('class','currentlySongList');
+//
+//       // task.className = 'song-'+ name;
+//       // task.setAttribute("id","song-"+ name);
+//       // newOl.appendChild(task);
+//       playLists.appendChild(task);
+//       task.innerHTML = playlist[i].name + "     " + playlist[i].time;
+//       task.addEventListener('click',function(){
+//          console.log(playlist[i].name);
+//          audio.src = playlist[i].name;
+//       })
+//
+//
+//    }
+// });
 
 
 playlistFavorites.addEventListener('click', ()=>{
@@ -212,12 +215,50 @@ playlistFavorites.addEventListener('click', ()=>{
       task.setAttribute('id',"alma-"+i)
       task.setAttribute('draggable', 'true');
       task.setAttribute('ondragstart', 'drag(event)');
+      task.addEventListener('click',function(){
+         console.log(favorites[i].name);
+         audio.src = favorites[i].name;
+      })
 
       // dragable
 
 
       playLists.appendChild(task);
       task.innerHTML = favorites[i].name + "     " + favorites[i].time;
+   }
+});
+
+playlistAllSong.addEventListener('click', ()=>{
+
+   document.getElementById("songsOfFolder").remove();
+
+   let newOl  = document.createElement('ol');
+   newOl.setAttribute('id','songsOfFolder');
+   tracks.appendChild(newOl);
+
+
+
+   let playLists = document.querySelector('#songsOfFolder');
+   for(let i = 0; i < playlist.length; i++){
+
+      let task = document.createElement('li');
+      task.setAttribute('class','currentlySongList');
+
+      // make the element to dragable
+      // dragable
+      task.setAttribute('id',"alma-"+i)
+      task.setAttribute('draggable', 'true');
+      task.setAttribute('ondragstart', 'drag(event)');
+      task.addEventListener('click',function(){
+         console.log(playlist[i].name);
+         audio.src = playlist[i].name;
+      })
+
+      // dragable
+
+
+      playLists.appendChild(task);
+      task.innerHTML = playlist[i].name + "     " + playlist[i].time;
    }
 });
 
