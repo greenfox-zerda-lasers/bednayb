@@ -1,9 +1,14 @@
 /***** Foxplayer *****/
 
+/*body{
+   background-image: url('./images/sea.jpg');
+}*/
+
 .foxplayer{
    width: 700px;
    height: 500px;
-   margin: auto;
+   /*margin: auto;*/
+   padding-top: 100px;
 }
 
 #logo{
@@ -14,8 +19,8 @@
 }
 
 #artwork{
-   width: 150px;
-   height: 135px;
+   width: 155px;
+   height: 155px;
    background-image: url('./images/music-placeholder.png');
    background-size: contain;
    background-repeat: no-repeat;
@@ -42,7 +47,9 @@
 .controll_Panel{
    position: relative;
    width: 100%;
-   border: solid 2px black;
+   border-left: solid 1px black;
+   border-bottom: solid 1px black;
+   border-right: solid 1px black;
 }
 
 .wrapper{
@@ -83,7 +90,7 @@
 }
 
 ol {
-  margin-left: 0px;
+  margin-left: -50px;
 }
 
 li {
@@ -91,6 +98,7 @@ li {
   font-weight: bolder;
   font-size: 15px;
   display: flex;
+  border-radius: 2px;
 }
 
 li:nth-child(odd) {
@@ -100,7 +108,7 @@ background-color: #EAEAEA;
 
 li:nth-child(even) {
 padding: 10px 0;
-background-color: #f5f5f5;
+background-color: #f1f1f1;
 }
 
 h2 {
@@ -142,10 +150,10 @@ h2 {
 #audio{
    position: relative;
    left: 220px;
-   top: 27px;
-   width: 250px;
+   top: 10px;
+   width: 300px;
    z-index: 1;
-   overflow: hidden;
+   /*overflow: hidden;*/
 }
 
 .currentlySongName{
@@ -159,13 +167,68 @@ h2 {
    top: -10px;
 }
 
-.div1 {
-    width: 350px;
-    height: 170px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
-}
+
 
 .flex{
    display: flex;
+}
+
+/*audio::-webkit-media-controls-play-button{
+   position: relative;
+   left: 230px;
+}*/
+
+button{
+   /*border: none;*/
+}
+
+
+.currentlySongList:hover {
+    background-color: lightblue;
+}
+
+.div1{
+   width: 350px;
+   height: 170px;
+   padding: 10px;
+
+   border: solid 1px black;
+   background-color: #f5f5f5;
+
+   overflow: scroll;
+   overflow-y: visible;
+   overflow-x: hidden;
+}
+.div1 {
+    /*border: 1px solid #aaaaaa;*/
+}
+
+
+.prev-song{
+   transform: rotate(180deg);
+}
+
+.backward-btn{
+   transform: rotate(180deg);
+}
+
+#songOfFolder{
+   padding: 10px;
+}
+
+.control-btn{
+   position: relative;
+   top: -18px;
+   left: 140px;
+}
+
+.everyplaylists{
+   margin-left: -30px;
+}
+
+.wrapper-container{
+   position: relative;
+   top: -530px;
+   left: 800px;
+
 }
