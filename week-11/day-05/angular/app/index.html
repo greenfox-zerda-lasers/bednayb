@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+   <head>
+      <meta charset="utf-8">
+      <title>Try Angular</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="lib\angular.min.js"></script>
+   </head>
+   <body ng-init ="numbers=[3,4,5,6,7] ; color='orange'; ninjas=['naruto','sasuke','obito','kakashi','sakura','pain','kakuzo','hidan']">
+      <input type="text" ng-model="favMeat" placeholder="enter your favorite food"/>
+      <p class="{{color}}">{{favMeat}}</p>
+      <h4>number</h4>
+      <p>{{5*5}}</p>
+      <h4>ng init</h4>
+
+
+         <p>{{numbers[0] + numbers[2] + 6}}</p> <!-- 3+5+6 -->
+         <ul>
+            <li>{{ninjas[0]}}</li>
+            <li>{{ninjas[1]}}</li>
+            <li>{{ninjas[2]}}</li>
+            <h5>all ninjas </h5>
+            <li ng-repeat="ninja in ninjas">{{ninja}}</li>
+         </ul>
+   </body>
+
+
+   <!-- <script src="tryangular.js" charset="utf-8"></script> -->
+</html>

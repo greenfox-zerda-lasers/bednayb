@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+   <head>
+      <meta charset="utf-8">
+      <title>Try Angular</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="lib\angular.min.js"></script>
+      <script src="lib\app.js"></script>
+   </head>
+   <body>
+<!-- PUT THE HEADER HTML FILE  -->
+<header class="header" ng-include="'header.html'"></header>
+<!-- PUT THE HEADER HTML FILE  -->
+
+      <div ng-controller="NinjaController">
+         <button ng-click="order ='name'">OrderBy Name</button>
+         <button ng-click="order ='belt'">OrderBy Belt</button>
+         <button ng-click="order ='score'">OrderBy Score</button>
+         <h3>name</h3>
+         <input type="text" ng-model="search"/>
+         <h3>score</h3>
+         <input type="number" ng-model="search"/>
+         <ul>
+            <li ng-repeat="members in bloodStone | orderBy: order | filter:search" | ng-show="members.examPass">{{members.name}} ---{{members.belt}} ---{{members.score}}</li>
+         </ul>
+         <ul>
+            <li ng-repeat="members in bloodStone | orderBy: order | filter:search" | ng-show="!members.examPass">{{members.name}} ---{{members.belt}} ---{{members.score}}</li>
+         </ul>
+         <h4>new student</h4>
+         <form ng-submit="addStudent()">
+            <input type="text" placeholder="name" ng-model="members.name"/>
+            <input type="text" placeholder="belt" ng-model="members.belt"/>
+            <input type="text" placeholder="score" ng-model="members.score"/>
+            <input type="submit" value="Add new student" />
+         </form>
+      </div>
+
+   </body>
+
+   <!-- <script src="tryangular.js"></script> -->
+</html>
