@@ -19,6 +19,7 @@ myNinjaApp.controller('NinjaController', function($scope){
             score:parseInt($scope.members.score),
             examPass:true
          })
+         // make empty again
          $scope.members.name ="",
          $scope.members.belt ="",
          $scope.members.score =""
